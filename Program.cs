@@ -4,7 +4,7 @@ namespace SimpleAlgorithm
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             int[] m = { 450, 177, 237, -27, -73, 466, -457 };
 
@@ -26,14 +26,13 @@ namespace SimpleAlgorithm
                 }
             }
             Console.WriteLine("Max={0}", max);
-            int option;
             for (var i = 0; i < m.Length - 1; i++)
             {
                 for (var j = i + 1; j < m.Length; j++)
                 {
                     if (m[i] > m[j])
                     {
-                        option = m[i];
+                        var option = m[i];
                         m[i] = m[j];
                         m[j] = option;
                     }
@@ -44,16 +43,16 @@ namespace SimpleAlgorithm
             {
                 Console.WriteLine(m[i]);
             }
-            int option_1;
+
             for (int i = 0; i < m.Length - 1; i++)
             {
                 for (int j = i + 1; j < m.Length; j++)
                 {
                     if (m[i] < m[j])
                     {
-                        option_1 = m[i];
+                        var option1 = m[i];
                         m[i] = m[j];
-                        m[j] = option_1;
+                        m[j] = option1;
                     }
                 }
             }
